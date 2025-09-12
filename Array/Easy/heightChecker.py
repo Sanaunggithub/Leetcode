@@ -1,15 +1,19 @@
-def heightChecker(self, heights):
+def heightChecker(heights):
         """
         :type heights: List[int]
         :rtype: int
         """
-        # Make a sorted copy of the heights
         expected = sorted(heights)
-        
-        # Count the number of positions where heights differ from expected
-        count = 0
-        for h, e in zip(heights, expected):
-            if h != e:
-                count += 1
-        
-        return count
+
+        res = []
+
+        i = 0
+
+        while i < len(heights):
+                if heights[i] != expected[i]:
+                        res.append(heights[i])
+                i += 1
+        return len(res)
+
+heights = [1,1,4,2,1,3]
+print(heightChecker(heights))
