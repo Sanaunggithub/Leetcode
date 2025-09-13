@@ -40,3 +40,20 @@ print(buddyStrings(s, goal))
 # len(set(s)) = 3
 # len(s) = 6
 # Compare: 3 < 6 → ✅ True
+
+
+# s = "ab"
+# goal = "ba"
+
+# diffs = [0,1]
+# Check:
+# s[0] == goal[1]  # 'a' == 'a' → True
+# s[1] == goal[0]  # 'b' == 'b' → True
+# Both True → swapping indices 0 and 1 fixes the string
+
+
+# s = "abcd"
+# goal = "badc"
+
+# diffs = [0,1,2,3]  # 4 differences
+# # Check only works if len(diffs) == 2
