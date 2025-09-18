@@ -5,7 +5,7 @@ def canBeTypedWords(text, brokenLetters):
   
     for word in text:
         word = set(word)
-        if(broken & word):  # {'a','d'} ∩ {'w','o','r','l','d'} = {'d'}
+        if(broken & word):  # {'a','d'} ∩ {'w','o','r','l','d'} = {'d'}a
             count -= 1
         
     return count
