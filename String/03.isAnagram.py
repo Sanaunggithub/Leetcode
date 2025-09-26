@@ -32,8 +32,6 @@ def isAnagram(s, t):
 # time complexity : O(n+m)
 # space complexity: O(n+m)
 
-# third solution
-#   return Counter(s)== Counter(t)
 
 s = "jar"
 t = "jam"
