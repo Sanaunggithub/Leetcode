@@ -3,7 +3,7 @@ import java.util.List;
 
 import javax.swing.tree.TreeNode;
 
-public class Preorder {
+public class PreOrder {
     public List<Integer> preorderTraversal(TreeNode root) {
         ArrayList<Integer> result = new ArrayList<>();
         preorder(root, result);
