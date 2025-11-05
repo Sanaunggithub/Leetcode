@@ -1,17 +1,19 @@
-def solveNQueens(n):
+def totalNQueens(n):
+        
+        
     col = set()
     posDiag = set() # r + c
     negDiag = set() #r - c
 
-    res = []
-
     board = [["."] * n for _ in range(n)]
+
+    res = []
 
     def backtrack(r):
         if r == n:
             copy = ["".join(row) for row in board]
             res.append(copy)
-            return 
+            return
 
         for c in range(n):
             if c in col or r + c in negDiag or r - c in posDiag:
@@ -30,4 +32,4 @@ def solveNQueens(n):
             board[r][c] = "."
     
     backtrack(0)
-    return res
+    return len(res)
