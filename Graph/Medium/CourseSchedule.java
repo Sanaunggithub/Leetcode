@@ -38,7 +38,7 @@ class Solution {
                 return false;
         }
 
-        // backtracking
+        // backtracking after visiting all children of a node
         visited[c] = false;
         graph.get(c).clear();
         return true;
