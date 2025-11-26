@@ -1,0 +1,32 @@
+def getLucky( s, k):
+        
+    m= {
+        'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5,
+        'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10,
+        'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15,
+        'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20,
+        'u': 21, 'v': 22, 'w': 23, 'x': 24, 'y': 25,
+        'z': 26
+    }
+
+    letter = ""
+
+    # convert letter to number
+    for l in s:
+        letter += str(m[l])
+
+    # do transformation k times
+    while k > 0:    
+        res = 0 
+        
+        for ss in letter:
+            res += int(ss)
+            
+        k -= 1
+        letter = str(res)
+
+    return res
+
+s = "iiii"
+k = 1
+print(getLucky(s, k))
